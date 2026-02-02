@@ -1,8 +1,0 @@
-[server]
-enableCORS = false
-enableXsrfProtection = false
-baseUrlPath = "/unitrateextractor"
-
-[browser]
-serverAddress = "gnctools.ca"
-serverPort = 443
