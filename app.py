@@ -57,15 +57,21 @@ def main():
             province=controls["province"],
             city=controls["city"],
             month_name_to_num=month_name_to_num,
-            limit=controls["limit"],
         )
         df = run_search(CONFIG.db_path, sql, params)
         df = df.drop(columns=["_score", "Score", "_rowid"], errors="ignore")
 
     df = format_output_df(df)
+    
+    # ✅ Safety guard (prevents huge renders / memory spikes)
+    MAX_RENDER_ROWS = 5000
+    if len(df) > MAX_RENDER_ROWS:
+        st.warning(
+            f"Too many results. ({len(df)} rows). Showing first {MAX_RENDER_ROWS} rows. Please refine your search.")
+        df = df.head(MAX_RENDER_ROWS)
+
     df = render_results(df)
     render_table(df, max_height_px=CONFIG.max_table_height_px)
-
 
 if __name__ == "__main__":
     main()

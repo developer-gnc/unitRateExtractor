@@ -61,7 +61,7 @@ def render_controls(
     query = st.text_input(
         "Type search text (e.g., 'drywall', 'demolition', 'invoice 123')"
     ).strip()
-    limit = st.slider("Max results", 50, 2000, 50, step=50)
+    # limit = st.slider("Max results", 50, 2000, 50, step=50)
 
     c1, c2 = st.columns(2)
     c3, c4 = st.columns(2)
@@ -77,7 +77,6 @@ def render_controls(
 
     return {
     "query": query,
-    "limit": limit,
     "year_filter": year_filter,
     "month_filter": month_filter,
     "province": province,

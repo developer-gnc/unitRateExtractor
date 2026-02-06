@@ -61,10 +61,7 @@ def build_search_sql(
     province: str,
     city: str,
     month_name_to_num: Dict[str, int],
-    limit: int,
 ):
-#    where = ['"Item Description" LIKE ?']
-#    params = [f"%{query}%"]
 
     # --- NEW: tokenize and AND each token ---
     terms = tokenize(query)
@@ -122,7 +119,7 @@ def build_search_sql(
         LIMIT ?
     '''
     # IMPORTANT: score params come first, then WHERE params, then LIMIT
-    params = score_params + where_params + [limit]
+    params = score_params + where_params
 
     return sql, params
 

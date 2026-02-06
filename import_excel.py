@@ -1,7 +1,7 @@
 import pandas as pd
 import sqlite3
 
-EXCEL_PATH = "master 1.xlsx"
+EXCEL_PATH = "master.xlsx"
 DB_PATH = "data.db"
 TABLE_NAME = "records"
 
