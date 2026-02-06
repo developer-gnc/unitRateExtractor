@@ -112,7 +112,9 @@ def build_search_sql(
             "City"                  AS "City",
             "Item Description"      AS "Item Description",
             "UOM"                   AS "UOM",
-            "Unit Rate"             AS "Unit Rate"
+            "Unit Rate"             AS "Unit Rate",
+            "GNC File"             AS "GNC File",
+            "File Name"            AS "File Name"
         FROM "{table}"
         WHERE {where_sql}
         ORDER BY _score DESC
@@ -163,7 +165,9 @@ def build_candidate_sql(
             "City"                  AS "City",
             "Item Description"      AS "Item Description",
             "UOM"                   AS "UOM",
-            "Unit Rate"             AS "Unit Rate"
+            "Unit Rate"             AS "Unit Rate",
+            "GNC File"             AS "GNC File",
+            "File Name"            AS "File Name"
         FROM "{table}"
         WHERE {where_sql}
         LIMIT ?

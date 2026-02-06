@@ -3,7 +3,7 @@ import html as html_lib
 from typing import Dict, List
 import streamlit as st
 import pandas as pd
-
+from src.render import inject_controls_css
 
 @st.cache_data(show_spinner=False)
 def get_base64_image(path: str) -> str:
@@ -13,6 +13,7 @@ def get_base64_image(path: str) -> str:
 
 def render_header(page_title: str, logo_path: str):
     st.set_page_config(page_title=page_title, layout="wide")
+    inject_controls_css()
     logo_b64 = get_base64_image(logo_path)
 
     st.markdown(
@@ -55,7 +56,14 @@ def render_controls(
 ) -> Dict:
     st.title("Search in Item Description")
 
-    fuzzy_on = st.checkbox("Fuzzy (typo tolerant)", value=False)
+    fuzzy_on = st.checkbox(
+        "Fuzzy (typo tolerant)", 
+        value=False, 
+        help=( "Fuzzy search finds close matches even with typos or different word order.\n\n"
+        "Example: 'demoltion' → matches 'demolition'.\n"
+        "Tip: Increase the strength slider to make results stricter."),
+    )
+
     min_score = st.slider("Fuzzy match strength (higher = stricter)", 50, 95, 70, step=1) if fuzzy_on else 70
     
     query = st.text_input(
