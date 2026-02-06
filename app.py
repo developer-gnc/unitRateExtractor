@@ -38,10 +38,11 @@ def main():
         candidates = run_search(CONFIG.db_path, cand_sql, cand_params)
 
         # 2) Fuzzy rank in Python
+        FUZZY_MAX_RESULTS = 500  # or 2000
         df = fuzzy_rank_results(
             candidates,
             query=controls["query"],
-            limit=controls["limit"],
+            limit=FUZZY_MAX_RESULTS,
             min_score=controls["min_score"],
         )
         df = df.drop(columns=["_score", "Score", "_rowid"], errors="ignore")

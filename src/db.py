@@ -116,7 +116,6 @@ def build_search_sql(
         FROM "{table}"
         WHERE {where_sql}
         ORDER BY _score DESC
-        LIMIT ?
     '''
     # IMPORTANT: score params come first, then WHERE params, then LIMIT
     params = score_params + where_params
