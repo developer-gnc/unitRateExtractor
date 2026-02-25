@@ -58,6 +58,13 @@ front_cols = [c for c in ["GNC File", "Province", "City"] if c in merged.columns
 other_cols = [c for c in merged.columns if c not in front_cols]
 merged = merged[front_cols + other_cols]
 
+for col in ["Subtotal", "Unit Rate"]:
+    if col in merged.columns:
+        merged[col] = (
+            pd.to_numeric(merged[col], errors="coerce")
+            .round(2)
+        )
+
 # --- Write to SQLite ---
 conn = sqlite3.connect(DB_PATH)
 merged.to_sql(TABLE_NAME, conn, if_exists="replace", index=False)

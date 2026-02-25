@@ -147,9 +147,9 @@ def _inject_table_css(max_height_px: int):
         /* 3 Invoice Month */
         table.custom-table th:nth-child(3), table.custom-table td:nth-child(3) {{ max-width: 70px; width: 70px; }}
         /* 4 Province */
-        table.custom-table th:nth-child(4), table.custom-table td:nth-child(4) {{ max-width: 70px; width: 70px; }}
+        table.custom-table th:nth-child(4), table.custom-table td:nth-child(4) {{ max-width: 110px; width: 110px; word-break: break-word; text-overflow: clip; white-space: normal !important; }}
         /* 5 City */
-        table.custom-table th:nth-child(5), table.custom-table td:nth-child(5) {{ max-width: 110px; width: 110px; }}
+        table.custom-table th:nth-child(5), table.custom-table td:nth-child(5) {{ max-width: 110px; width: 110px; word-break: break-word; text-overflow: clip; white-space: normal !important; }}
         /* 7 Qty */
         table.custom-table th:nth-child(7), table.custom-table td:nth-child(7) {{ max-width: 70px; width: 70px; }}
         /* 8 UoM */
