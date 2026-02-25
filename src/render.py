@@ -141,23 +141,23 @@ def _inject_table_css(max_height_px: int):
 
         /* Column widths */
         /* 1 S. No. */
-        table.custom-table th:nth-child(1), table.custom-table td:nth-child(1) {{ max-width: 70px;  width: 70px; }}
+        table.custom-table th:nth-child(1), table.custom-table td:nth-child(1) {{ max-width: 50px;  width: 50px; }}
         /* 2 Invoice Year */
-        table.custom-table th:nth-child(2), table.custom-table td:nth-child(2) {{ max-width: 70px; width: 70px; }}
+        table.custom-table th:nth-child(2), table.custom-table td:nth-child(2) {{ max-width: 50px; width: 50px; }}
         /* 3 Invoice Month */
-        table.custom-table th:nth-child(3), table.custom-table td:nth-child(3) {{ max-width: 130px; width: 130px; }}
-        /* 4 Provnice */
-        table.custom-table th:nth-child(4), table.custom-table td:nth-child(4) {{ max-width: 110px; width: 110px; }}
+        table.custom-table th:nth-child(3), table.custom-table td:nth-child(3) {{ max-width: 70px; width: 70px; }}
+        /* 4 Province */
+        table.custom-table th:nth-child(4), table.custom-table td:nth-child(4) {{ max-width: 70px; width: 70px; }}
         /* 5 City */
-        table.custom-table th:nth-child(5), table.custom-table td:nth-child(5) {{ max-width: 140px; width: 140px; }}
+        table.custom-table th:nth-child(5), table.custom-table td:nth-child(5) {{ max-width: 110px; width: 110px; }}
         /* 7 Qty */
         table.custom-table th:nth-child(7), table.custom-table td:nth-child(7) {{ max-width: 70px; width: 70px; }}
         /* 8 UoM */
-        table.custom-table th:nth-child(8), table.custom-table td:nth-child(8) {{ max-width: 140px; width: 140px; }}
+        table.custom-table th:nth-child(8), table.custom-table td:nth-child(8) {{ max-width: 70px; width: 70px; }}
         /* 9 Unit Rate */
-        table.custom-table th:nth-child(9), table.custom-table td:nth-child(9) {{ max-width: 70px; width: 70px; }}
+        table.custom-table th:nth-child(9), table.custom-table td:nth-child(9) {{ max-width: 100px; width: 100px; }}
         /* 10 Subtotal */
-        table.custom-table th:nth-child(10), table.custom-table td:nth-child(10) {{ max-width: 140px; width: 140px; }}
+        table.custom-table th:nth-child(10), table.custom-table td:nth-child(10) {{ max-width: 100px; width: 100px; }}
         /* 11 GNC File  */
         table.custom-table th:nth-child(11), table.custom-table td:nth-child(11) {{ max-width: 70px;  width: 70px; }}
         /* 12 File Name */
