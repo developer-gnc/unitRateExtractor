@@ -111,10 +111,10 @@ def build_search_sql(
             "Province"              AS "Province",
             "City"                  AS "City",
             "Item Description"      AS "Item Description",
-            "Qty"                   AS "Qty"
+            "Qty"                   AS "Qty",
             "UOM"                   AS "UOM",
             "Unit Rate"             AS "Unit Rate",
-            "Subtotal"              AS "Subtotal"
+            "Subtotal"              AS "Subtotal",
             "GNC File"             AS "GNC File",
             "File Name"            AS "File Name"
         FROM "{table}"
@@ -166,10 +166,10 @@ def build_candidate_sql(
             "Province"              AS "Province",
             "City"                  AS "City",
             "Item Description"      AS "Item Description",
-            "Qty"                   AS "Qty"
+            "Qty"                   AS "Qty",
             "UOM"                   AS "UOM",
             "Unit Rate"             AS "Unit Rate",
-            "Subtotal"              AS "Subtotal"
+            "Subtotal"              AS "Subtotal",
             "GNC File"             AS "GNC File",
             "File Name"            AS "File Name"
         FROM "{table}"
