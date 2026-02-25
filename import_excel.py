@@ -70,6 +70,8 @@ conn.execute(f'CREATE INDEX IF NOT EXISTS idx_city ON {TABLE_NAME}("City");')
 conn.execute(f'CREATE INDEX IF NOT EXISTS idx_invoice_year ON {TABLE_NAME}("Invoice Year");')
 conn.execute(f'CREATE INDEX IF NOT EXISTS idx_invoice_month ON {TABLE_NAME}("Invoice Month");')
 conn.execute(f'CREATE INDEX IF NOT EXISTS idx_invoice_month_name ON {TABLE_NAME}("Invoice Month Name");')
+conn.execute(f'CREATE INDEX IF NOT EXISTS Qty ON {TABLE_NAME}("Qty");')
+conn.execute(f'CREATE INDEX IF NOT EXISTS Subtotal ON {TABLE_NAME}("Subtotal");')
 
 
 conn.commit()
