@@ -150,14 +150,18 @@ def _inject_table_css(max_height_px: int):
         table.custom-table th:nth-child(4), table.custom-table td:nth-child(4) {{ max-width: 110px; width: 110px; }}
         /* 5 City */
         table.custom-table th:nth-child(5), table.custom-table td:nth-child(5) {{ max-width: 140px; width: 140px; }}
-        /* 7 UoM */
+        /* 7 Qty */
         table.custom-table th:nth-child(7), table.custom-table td:nth-child(7) {{ max-width: 70px; width: 70px; }}
-        /* 8 Unit Rate */
+        /* 8 UoM */
         table.custom-table th:nth-child(8), table.custom-table td:nth-child(8) {{ max-width: 140px; width: 140px; }}
-        /* 9 GNC File  */
-        table.custom-table th:nth-child(9), table.custom-table td:nth-child(9) {{ max-width: 70px;  width: 70px; }}
-        /* 10 File Name */
-        table.custom-table th:nth-child(10), table.custom-table td:nth-child(10) {{ max-width: 110px; width: 110px; word-break: break-word; text-overflow: clip; white-space: normal !important; }}
+        /* 9 Unit Rate */
+        table.custom-table th:nth-child(9), table.custom-table td:nth-child(9) {{ max-width: 70px; width: 70px; }}
+        /* 10 Subtotal */
+        table.custom-table th:nth-child(10), table.custom-table td:nth-child(10) {{ max-width: 140px; width: 140px; }}
+        /* 11 GNC File  */
+        table.custom-table th:nth-child(11), table.custom-table td:nth-child(11) {{ max-width: 70px;  width: 70px; }}
+        /* 12 File Name */
+        table.custom-table th:nth-child(12), table.custom-table td:nth-child(12) {{ max-width: 110px; width: 110px; word-break: break-word; text-overflow: clip; white-space: normal !important; }}
 
         /* Item Description wrapping (6th column) */
         table.custom-table tbody td:nth-child(6) {{
